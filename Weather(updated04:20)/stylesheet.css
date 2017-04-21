@@ -1,0 +1,60 @@
+@font-face{
+    font-family: "Cloud3";
+    src: url(LCD.ttf);
+}
+#container, #videoElement {
+    position: absolute;
+    z-index: -1;
+    bottom:0;
+    left:0;
+    margin: 0px auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+body{
+    background-color: gray;
+    font-family: Cloud3;
+    color: yellow;
+    font-size: 75px;
+}
+.transTemp, #temp{
+    font-family: Cloud3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+    width: 105px;
+    text-align: right;
+    opacity: 0.1;
+}
+#temp{
+    color: yellow;
+    opacity: 1.0;
+}
+#F{
+    position: absolute;
+    top: 0;
+    left: 115px;
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    opacity: 0.1;
+}
+#transWeatherPic, #weatherPic{
+    position: absolute;
+    top: 75px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0.1;
+}
+#weatherPic{
+    opacity: 1.0;
+}
+.enter{
+    position: absolute;
+    left: 300px;
+}
