@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+</head>
+<body>
+
+<!--Import script source from google for buttons and profile calls-->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="server.js"></script>
+<meta name="google-signin-client_id" content="949489458449-e9d06a623pialmks68s1lii64r20gcau.apps.googleusercontent.com">
+
+<!--This is the google sign-in button-->
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<!--BUTTONS-->
+<button onclick="signOut();" id="signOutButton" type="button" data-onsuccess="onSignOut">Sign out</button>
+<button onclick="location.href='myinfo.html'" type="button" id="profileButton">My Profile</button>
+
+
+<!--SCRIPTS-->
+<script>
+    var idNum = 0; //Set to 0 to check for errors later.."if idnum = 0 (profile not logged in)"
+    var fullName;
+    var email;
+
+    function signOut() { //This event happens when you click the signOutButton
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+            document.getElementById('signOutButton').style.visibility = 'hidden'; //  Hides button on logout
+        });
+    }
+
+
+    if (idNum !== 0) { //As long as there is an idNum, signOutButton will show
+        document.getElementById('signOutButton').style.visibility = 'hidden';
+    }
+
+    function onSignIn(googleUser) { //This executes on clicking the sign in button
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+        //Below this line displays user profile information to the user and not just the console
+        var idNumResult = document.getElementById('idDisplay');
+        var fullNameResult = document.getElementById('fullNameDisplay');
+        var emailResult = document.getElementById('emailDisplay');
+        email = profile.getEmail();
+        idNum = profile.getId();
+        fullName = profile.getName();
+        //Below this line fills each paragraph with user information
+        emailResult.textContent = "Your e-mail is " + email;
+        fullNameResult.textContent = "Your Name is " + fullName;
+        idNumResult.textContent = "Your Id# is " + idNum;
+
+
+        document.getElementById('signOutButton').style.visibility = 'visible'; //  Shows button on login
+    }
+
+</script>
+<!--User enters home address here-->
+<center>
+    <form id="homeForm">
+        <lable>What is your home address?</lable>
+        <input id="homeField" type='text'></input>
+        <button id="homeButton" type="button">Update</button>
+    </form>
+    <br><br>
+
+    <!--User enters work address here-->
+    <form id="workForm">
+        <lable>What is your work address?</lable>
+        <input id="workField" type="text"></input>
+        <button id="workButton" type="button">Update</button>
+
+    </form>
+</center>
+
+<!--Sets the paragraph IDs up to be referenced from JS-->
+<p id="emailDisplay"></p><br>
+<p id="idDisplay"></p><br>
+<p id="fullNameDisplay"></p><br>
+<p id="result"></p><br>
+
+<script>
+    var homeButton = document.getElementById('homeButton'); //This is your home address button
+    homeButton.addEventListener('click', gethomeAddress, false); //Event listener for the button
+    function gethomeAddress() {
+        var homeField = document.getElementById('homeField').value;
+        var result = document.getElementById('result'); //Gets the value of the user info and sets up variable result
+
+        if (homeField.length < 5) {
+            result.textContent = 'Your home address must contain at least 5 characters';
+
+        } else {
+            result.textContent = 'Your home address is: ' + homeField;
+
+        }
+    }
+
+    var workButton = document.getElementById('workButton'); //This is your work address button
+    workButton.addEventListener('click', getworkAddress, false);//Event listener for the button
+    function getworkAddress() {
+        var workField = document.getElementById('workField').value;//Gets user input
+        var result = document.getElementById('result');
+        var db;
+
+        if (workField.length < 5) {
+            result.textContent = 'Your home address must contain at least 5 characters';
+
+        } else {
+            result.textContent = 'Your work address is: ' + workField; //Displays user input as long as >5 characters
+            var insertDocument = function(db, callback){
+                db.collection('users').insertOne({
+                    "workAddress": workField,
+                })
+
+            };
+            insertDocument(db, function() {
+                db.close();
+            });
+
+
+
+
+
+    }}
+
+
+</script>
+
+
+</body>
+</html>
