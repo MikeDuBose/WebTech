@@ -49,6 +49,7 @@
         var idNumResult = document.getElementById('idDisplay');
         var fullNameResult = document.getElementById('fullNameDisplay');
         var emailResult = document.getElementById('emailDisplay');
+        var idField = document.getElementById('idField').setAttribute("value", profile.getId());
         email = profile.getEmail();
         idNum = profile.getId();
         fullName = profile.getName();
@@ -58,25 +59,22 @@
         idNumResult.textContent = "Your Id# is " + idNum;
 
 
+
+
         document.getElementById('signOutButton').style.visibility = 'visible'; //  Shows button on login
     }
 
 </script>
 <!--User enters home address here-->
 <center>
-    <form id="homeForm">
-        <lable>What is your home address?</lable>
-        <input id="homeField" type='text'></input>
-        <button id="homeButton" type="button">Update</button>
-    </form>
-    <br><br>
-
-    <!--User enters work address here-->
-    <form id="workForm">
-        <lable>What is your work address?</lable>
-        <input id="workField" type="text"></input>
-        <button id="workButton" type="button">Update</button>
-
+    <form id="addressForm" action="/" method="post">
+        <input id="idField" type="text" name="idField" value="" style="display: none">
+        <label>What is your home address?</label>
+        <input id="homeField" type='text' name="homeAddress">
+        <label>What is your work address?</label>
+        <input id="workField" type="text" name="workAddress">
+        <br>
+        <button id="workButton" type="submit">Update</button>
     </form>
 </center>
 
