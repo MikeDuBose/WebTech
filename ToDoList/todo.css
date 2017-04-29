@@ -1,0 +1,20 @@
+#items{
+    position:fixed;
+    bottom:20%;
+    right:18%;
+}
+
+#entry{
+    position:fixed;
+    bottom:37%;
+    right:11%;
+    background-color:#F8EEE7;
+
+}
+
+#add{
+    position:fixed;
+    bottom:37%;
+    right:4%;
+    background-color:#F8EEE7;
+}
