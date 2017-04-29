@@ -1,0 +1,19 @@
+{
+  "name": "magicmira",
+  "version": "0.5.0",
+  "description": "hey mira, show me the fairest of them all",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express":"4.15.x",
+    "mongoose": "4.9.x",
+    "path": "0.12.x",
+    "mongodb": "2.2.x",
+    "connect":"3.6.x"
+  },
+  "author": "chelsea childers, mike dubose, morgan macdonna wesley stroupe",
+  "license": "ISC"
+}
