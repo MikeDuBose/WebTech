@@ -13,7 +13,7 @@
         */
         var weatherHandler = function(){
 
-            var url = 'http://api.openweathermap.org/data/2.5/weather?zip=28804,us&units=imperial&APPID=81899cb18139bf576e0186c07ef81fff' ;
+            var url = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&APPID=81899cb18139bf576e0186c07ef81fff' ;
             
             $.get(url, function(TempCall) {
                 console.log(TempCall);
@@ -119,6 +119,9 @@
         
         
 
+        //////////////////////////////////////////////////////
+        //////The following implements the webcam
+        //////////////////////////////////////////////////////
         var video = document.querySelector("#videoElement");
  
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
@@ -135,10 +138,29 @@
             window.alert("The camera has failed. Try checking browser capability")
         };
 
+        //////////////////////////////////////////////////////
+        //////The following gets the Location
+        //////////////////////////////////////////////////////
+        var lat;
+        var long;
 
-        ////////////////////
-        //TO DO LIST
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+        } else {
+            alert('It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.');
+        }
+        function successFunction(position) {
+            lat = parseInt(position.coords.latitude);
+            long = parseInt(position.coords.longitude);
+            console.log('Your latitude is :'+lat+' and longitude is '+long);
+        }
+        function errorFunction(position) {
+            window.alert("Geolocation has failed, unable to get location.");
+        }
 
+        //////////////////////////////////////////////////////
+        //////The following implements the to-do list
+        //////////////////////////////////////////////////////
         var items = [];
         var itemNum = 0;
         var id;
