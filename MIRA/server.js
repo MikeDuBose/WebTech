@@ -26,10 +26,19 @@ app.get('/', function(req, res){ //Sets our home page
 app.get('/myinfo.html', function(req, res){ //Allows user to visit /myinfo.html
     res.sendFile(path.join(__dirname + '/myinfo.html'));
 });
-
-app.get('/server.js', function(req, res){ //Allows user to visit /server.js
-    res.sendFile(path.join(__dirname + '/server.js'));
+app.get('/traffic.html', function(req, res){ //Allows user to visit /myinfo.html
+    res.sendFile(path.join(__dirname + '/traffic.html'));
 });
+app.get('/traffic.js', function(req, res){ //Allows user to visit /myinfo.html
+    res.sendFile(path.join(__dirname + '/traffic.js'));
+});
+app.get('/p5.js', function(req, res){ //Allows user to visit /myinfo.html
+    res.sendFile(path.join(__dirname + '/p5.js'));
+});
+
+/*app.get('/server.js', function(req, res){ //Allows user to visit /server.js
+    res.sendFile(path.join(__dirname + '/server.js'));
+});*/
 
 app.get('/WeatherScript.js', function(req, res){ //Allows user to visit /WeatherScript.js
     res.sendFile(path.join(__dirname + '/WeatherScript.js'));
