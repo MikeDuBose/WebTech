@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+		<title>Weather Wear</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="WeatherScript.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	</head>
+    
+	<body>
+        <div id="container">
+            <video autoplay="true" id="videoElement"></video>
+        </div>
+
+
+        <h1 class="transTemp">888</h1>
+        <h1 id="temp"></h1>
+        <img id="F" src="Img/of.png">
+        
+        <img id="transWeatherPic" src="Img/outline2.png" style="width:180px;height:180px;">
+        <div id="weatherPic"></div>
+        
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="949489458449-e9d06a623pialmks68s1lii64r20gcau.apps.googleusercontent.com">
+        <div id="googleLogin" class="g-signin2" data-onsuccess="onSignIn"></div>
+
+
+        <button onclick="signOut();"id="signOutButton" type="button" data-onsuccess="onSignOut">Sign out</button>
+        <button onclick="location.href='myinfo.html'" type="button" id="profileButton">My Profile</button>
+        <script>
+        function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+            document.getElementById('signOutButton').style.visibility = 'hidden'; //  Hides button on logout
+            });
+        }   
+        </script>
+
+        <script>
+
+        document.getElementById('signOutButton').style.visibility = 'hidden';
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            document.getElementById('signOutButton').style.visibility = 'visible'; //  Shows button on login
+                $.post( "/user-profile", profile.getId())
+                        .done(function( data ) {
+                        console.log( "Data Loaded: " + data );
+                });
+        }
+        </script>
+
+
+
+        <div id = items2>
+                <input id="entry"><button id="add">Add a Task</button>
+                <div id="items"></div></div>
+        <script src="todo.js"></script>
+</body>
+</html>
+    
+    
+<!--//GoogleAPI Client ID AUTH KEY
+//ClientID 949489458449-e9d06a623pialmks68s1lii64r20gcau.apps.googleusercontent.com
+
+//Client Secret
+//LJQsG-_EpRkq5_ZxMgvdf3Ar
+-->

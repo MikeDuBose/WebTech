@@ -1,0 +1,97 @@
+@font-face{
+    font-family: "Cloud3";
+    src: url(LCD.ttf);
+}
+#container, #videoElement {
+    position: absolute;
+    z-index: -1;
+    bottom:0;
+    left:0;
+    margin: 0px auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+body{
+    background-color: gray;
+    font-family: Cloud3;
+    color: yellow;
+    font-size: 75px;
+}
+.transTemp, #temp{
+    font-family: Cloud3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+    width: 105px;
+    text-align: right;
+    opacity: 0.1;
+}
+#temp{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: yellow;
+    opacity: 1.0;
+}
+#F{
+    position: absolute;
+    top: 0;
+    left: 115px;
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    opacity: 0.1;
+}
+#transWeatherPic, #weatherPic{
+    position: absolute;
+    top: 75px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0.1;
+}
+#weatherPic{
+    opacity: 1.0;
+}
+#googleLogin{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#signOutButton{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+#profileButton{
+    position: absolute;
+    top: 40px;
+    right: 0px;
+}
+#items{
+    position:fixed;
+    bottom:0%;
+    right:0%;
+    font-family: "Apple LiGothic";
+    font-size: 20px;
+    color: black;
+}
+
+#entry{
+    position:fixed;
+    bottom:21%;
+    right:7%;
+    background-color:#F8EEE7;
+
+}
+
+#add{
+    position:fixed;
+    bottom:21%;
+    right:0%;
+    background-color:#F8EEE7;
+}
