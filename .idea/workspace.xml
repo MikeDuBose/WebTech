@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f19b76a-5992-465d-89fd-a319c9307d30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MIRA/.idea/workspace.xml" afterPath="$PROJECT_DIR$/MIRA/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MIRA/index.html" afterPath="$PROJECT_DIR$/MIRA/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MIRA/server.js" afterPath="$PROJECT_DIR$/MIRA/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,22 +22,75 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MIRA/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
+            <state relative-caret-position="1122">
               <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WeatherScript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MIRA/WeatherScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3762">
+              <caret line="182" column="4" lean-forward="true" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
+              <folding>
+                <marker date="1493572300000" expanded="true" signature="12:6173" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="54:6142" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="86:4019" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="182:264" ph="/*...*/" />
+                <marker date="1493572300000" expanded="true" signature="304:2534" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="502:863" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="879:941" ph="/*...*/" />
+                <marker date="1493572300000" expanded="true" signature="984:2522" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="1235:1388" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="1341:1366" ph="..." />
+                <marker date="1493572300000" expanded="true" signature="1536:1691" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="1644:1669" ph="..." />
+                <marker date="1493572300000" expanded="true" signature="1831:1979" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="1932:1957" ph="..." />
+                <marker date="1493572300000" expanded="true" signature="2125:2276" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="2229:2254" ph="..." />
+                <marker date="1493572300000" expanded="true" signature="2355:2508" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="2461:2486" ph="..." />
+                <marker date="1493572300000" expanded="true" signature="2573:2865" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="2645:2828" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="2907:3376" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="3124:3310" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="3217:3296" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="3415:3624" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="3645:3822" ph="{&quot;(show me the) weather&quot;: weatherHandler...}" />
+                <marker date="1493572300000" expanded="true" signature="4025:4082" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="4377:4471" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="4512:4583" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="4618:4712" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="4724:4765" ph="//..." />
+                <marker date="1493572300000" expanded="true" signature="4891:5923" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="4974:5123" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="5425:5589" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="5791:5912" ph="{...}" />
+                <marker date="1493572300000" expanded="true" signature="5956:6133" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MIRA/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="286">
+              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+              <folding>
+                <marker date="1493587252000" expanded="true" signature="31:3545" ph="..." />
+                <marker date="1493587252000" expanded="true" signature="38:3368" ph="..." />
+                <marker date="1493587252000" expanded="true" signature="46:947" ph="..." />
+                <marker date="1493587252000" expanded="true" signature="960:3360" ph="..." />
+                <marker date="1493587252000" expanded="true" signature="1852:2215" ph="..." />
+                <marker date="1493587252000" expanded="true" signature="2233:3167" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,16 +267,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493581157942</updated>
-      <workItem from="1493581159152" duration="2558000" />
+      <workItem from="1493581159152" duration="5088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2558000" />
+    <option name="totallyTimeSpent" value="5088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -263,18 +315,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MIRA/server.js">
+    <entry file="file://$PROJECT_DIR$/MIRA/WeatherScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="3762">
+          <caret line="182" column="4" lean-forward="true" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
+          <folding>
+            <marker date="1493572300000" expanded="true" signature="12:6173" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="54:6142" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="86:4019" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="182:264" ph="/*...*/" />
+            <marker date="1493572300000" expanded="true" signature="304:2534" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="502:863" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="879:941" ph="/*...*/" />
+            <marker date="1493572300000" expanded="true" signature="984:2522" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="1235:1388" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="1341:1366" ph="..." />
+            <marker date="1493572300000" expanded="true" signature="1536:1691" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="1644:1669" ph="..." />
+            <marker date="1493572300000" expanded="true" signature="1831:1979" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="1932:1957" ph="..." />
+            <marker date="1493572300000" expanded="true" signature="2125:2276" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="2229:2254" ph="..." />
+            <marker date="1493572300000" expanded="true" signature="2355:2508" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="2461:2486" ph="..." />
+            <marker date="1493572300000" expanded="true" signature="2573:2865" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="2645:2828" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="2907:3376" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="3124:3310" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="3217:3296" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="3415:3624" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="3645:3822" ph="{&quot;(show me the) weather&quot;: weatherHandler...}" />
+            <marker date="1493572300000" expanded="true" signature="4025:4082" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="4377:4471" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="4512:4583" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="4618:4712" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="4724:4765" ph="//..." />
+            <marker date="1493572300000" expanded="true" signature="4891:5923" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="4974:5123" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="5425:5589" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="5791:5912" ph="{...}" />
+            <marker date="1493572300000" expanded="true" signature="5956:6133" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MIRA/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        <state relative-caret-position="286">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <marker date="1493587252000" expanded="true" signature="31:3545" ph="..." />
+            <marker date="1493587252000" expanded="true" signature="38:3368" ph="..." />
+            <marker date="1493587252000" expanded="true" signature="46:947" ph="..." />
+            <marker date="1493587252000" expanded="true" signature="960:3360" ph="..." />
+            <marker date="1493587252000" expanded="true" signature="1852:2215" ph="..." />
+            <marker date="1493587252000" expanded="true" signature="2233:3167" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIRA/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
           <folding />
         </state>
       </provider>

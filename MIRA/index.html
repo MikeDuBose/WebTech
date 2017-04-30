@@ -4,13 +4,17 @@
 	<head>
         <meta charset="UTF-8">
         <title>Title</title>
-		<title>Weather Wear</title>
+		<title>MIRA: Magic Interactive Reflective Assistant</title>
             <script>
                 var emptyProfile = {"_id":null,"gID":null,"homeAddress":null,"workAddress":null}
-                window.userProfile = emptyProfile</script>
+                window.userProfile = emptyProfile
+                </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfYaSobEQPNS3AGOvaOksYD2y3-rJfvf4&callback=traffic">
+            </script>
         <script src="WeatherScript.js"></script>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
@@ -47,7 +51,6 @@
         </script>
 
         <script>
-
         document.getElementById('signOutButton').style.visibility = 'hidden';
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
@@ -61,8 +64,8 @@
                         window.userProfile = JSON.parse(data);
                         console.log( "Profile Loaded: " + JSON.stringify(window.userProfile));
                 });
-
         }
+
         </script>
 
 
