@@ -45,18 +45,16 @@ app.get('/LCD.ttf', function(req, res){ //Allows user to visit /LCD.ttf
 
 app.post('/user-profile', function(req,res){
     var id = Object.keys(req.body).toString();
-    var userProfile;
+    var userProfile = "";
+    console.log(id);
     userdb.findOne({"gID": id}, function(err, doc) {
-        //console.log(doc);
-        res.send(JSON.stringify(doc));
-        console.log(JSON.stringify(doc));
+        userProfile = JSON.stringify(doc);
+        console.log(userProfile);
+        userdb.close();
     });
-    res.end;
-    //console.log(id);
-    //console.log(userProfile);
-    //res.send(userProfile);
-    //res.end();
-    //userdb.close();
+    //console.log(response);
+    res.send("PROFILE_PLACEHOLDER");
+    res.end();
 });
 ////////////////////////////////////
 ////////////////////////////////////
@@ -78,6 +76,9 @@ app.get('/Img/raining.png', function(req, res){
 });
 app.get('/Img/Sun.png', function(req, res){
     res.sendFile(path.join(__dirname + '/Img/Sun.png'));
+});
+app.get('/Img/close.png', function(req, res){
+    res.sendFile(path.join(__dirname + '/Img/close.png'));
 });
 ////////////////////////////////////
 ////////////////////////////////////

@@ -75,23 +75,11 @@ body{
 #items{
     position:fixed;
     bottom:0%;
-    right:0%;
+    right:3%;
     font-family: "Apple LiGothic";
-    font-size: 20px;
+    font-size: 25px;
     color: black;
-}
-
-#entry{
-    position:fixed;
-    bottom:21%;
-    right:7%;
-    background-color:#F8EEE7;
-
-}
-
-#add{
-    position:fixed;
-    bottom:21%;
-    right:0%;
-    background-color:#F8EEE7;
+    background-color: lightgoldenrodyellow;
+    align-content: right;
+    width: 350px;
 }

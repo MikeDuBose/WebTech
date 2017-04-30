@@ -68,7 +68,7 @@
 
         var addItem = function(tag) {
             var task = tag;
-            if(task != '' && itemNum != 6){
+            if(task != '' && itemNum != 15){
                 items.push(task);
                 itemNum ++;
                 console.log(itemNum + "Added")
@@ -105,7 +105,7 @@
     var commands = {
         '(show me the) weather':            weatherHandler,
         'add *item (to the list)':          addItem,
-        'remove *item (from the list)':     searchItems,
+        'remove *item':     searchItems,
     };
 
     // Add voice commands to respond to
@@ -168,7 +168,7 @@
         function listTodos() {
             var html = '<ul>';
             for (var i = 0; i < items.length; i++){
-                html += '<li><span class="todoItem">' + items[i] + '</span><a href="#" class="deleteItem"> Finished! </a>' + '</li>';
+                html += '<li><span class="todoItem">' + items[i]+'   '+'</span><a href="#" class="deleteItem"><img src="Img/close.png" style="width:20px;height:20px;"></a>'+ '</li>';
             };
             //html += '</ul>';
 
@@ -182,7 +182,7 @@
                 id = todoItem[i].id;
             }
 
-            // Function to remove todo items if "Finished" is clicked
+            // Function to remove todo items if X is clicked
             var deleteItems = document.getElementsByClassName('deleteItem');
             for (i = 0; i < deleteItems.length; i++) {
                 deleteItems[i].id = i;
