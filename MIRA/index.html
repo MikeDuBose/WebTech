@@ -5,6 +5,9 @@
         <meta charset="UTF-8">
         <title>Title</title>
 		<title>Weather Wear</title>
+            <script>
+                var emptyProfile = {"_id":null,"gID":null,"homeAddress":null,"workAddress":null}
+                window.userProfile = emptyProfile</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
@@ -39,7 +42,8 @@
             console.log('User signed out.');
             document.getElementById('signOutButton').style.visibility = 'hidden'; //  Hides button on logout
             });
-        }   
+        }
+        window.userProfile = emptyProfile;
         </script>
 
         <script>
@@ -54,8 +58,10 @@
             document.getElementById('signOutButton').style.visibility = 'visible'; //  Shows button on login
                 $.post( "/user-profile", profile.getId())
                         .done(function( data ) {
-                        console.log( "Data Loaded: " + data );
+                        window.userProfile = JSON.parse(data);
+                        console.log( "Profile Loaded: " + JSON.stringify(window.userProfile));
                 });
+
         }
         </script>
 

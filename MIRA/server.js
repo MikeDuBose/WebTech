@@ -45,16 +45,18 @@ app.get('/LCD.ttf', function(req, res){ //Allows user to visit /LCD.ttf
 
 app.post('/user-profile', function(req,res){
     var id = Object.keys(req.body).toString();
-    var userProfile = "";
-    console.log(id);
+    var userProfile;
     userdb.findOne({"gID": id}, function(err, doc) {
-        userProfile = JSON.stringify(doc);
-        console.log(userProfile);
-        userdb.close();
+        //console.log(doc);
+        res.send(JSON.stringify(doc));
+        console.log(JSON.stringify(doc));
     });
-    //console.log(response);
-    res.send("PROFILE_PLACEHOLDER");
-    res.end();
+    res.end;
+    //console.log(id);
+    //console.log(userProfile);
+    //res.send(userProfile);
+    //res.end();
+    //userdb.close();
 });
 ////////////////////////////////////
 ////////////////////////////////////
