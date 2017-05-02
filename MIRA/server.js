@@ -47,6 +47,9 @@ app.get('/WeatherScript.js', function(req, res){ //Allows user to visit /Weather
 app.get('/stylesheet.css', function(req, res){ //Allows user to visit /stylesheet.css
     res.sendFile(path.join(__dirname + '/stylesheet.css'));
 });
+app.get('/profileStyle.css', function(req, res){ //Allows user to visit /stylesheet.css
+    res.sendFile(path.join(__dirname + '/profileStyle.css'));
+});
 
 app.get('/LCD.ttf', function(req, res){ //Allows user to visit /LCD.ttf
     res.sendFile(path.join(__dirname + '/LCD.ttf'));
@@ -77,11 +80,11 @@ app.get('/Img/Clouds.png', function(req, res){
 app.get('/Img/of.png', function(req, res){
     res.sendFile(path.join(__dirname + '/Img/of.png'));
 });
-app.get('/Img/lightning.png', function(req, res){
-    res.sendFile(path.join(__dirname + '/Img/lightning.png'));
+app.get('/Img/lightning2.png', function(req, res){
+    res.sendFile(path.join(__dirname + '/Img/lightning2.png'));
 });
-app.get('/Img/raining.png', function(req, res){
-    res.sendFile(path.join(__dirname + '/Img/raining.png'));
+app.get('/Img/raining2.png', function(req, res){
+    res.sendFile(path.join(__dirname + '/Img/raining2.png'));
 });
 app.get('/Img/Sun.png', function(req, res){
     res.sendFile(path.join(__dirname + '/Img/Sun.png'));

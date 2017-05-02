@@ -6,8 +6,9 @@
         <title>Title</title>
 		<title>MIRA: Magic Interactive Reflective Assistant</title>
             <script>
-                var emptyProfile = {"_id":null,"gID":null,"homeAddress":null,"workAddress":null}
+                var emptyProfile = {"_id":null,"gID":null,"homeAddress":null,"workAddress":null, "name": "you"}
                 window.userProfile = emptyProfile
+                window.fullName = "you"
                 </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
@@ -58,6 +59,7 @@
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            fullName = profile.getName();
             document.getElementById('signOutButton').style.visibility = 'visible'; //  Shows button on login
                 $.post( "/user-profile", profile.getId())
                         .done(function( data ) {
@@ -72,7 +74,7 @@
         <div id="items"><h3 class="middle">TO-DO LIST</h3><p class="middle">Try saying "add.." and a task.</p></div></div>
 
 
-        <iframe id="trafficFrame" src="traffic.html" style="border: none;"></iframe>
+        <iframe id="trafficFrame" class="greyedOut" src="traffic.html" style="border: none;"></iframe>
 </body>
 </html>
     

@@ -23,7 +23,7 @@
                 document.getElementById("temp").innerHTML= TempResult;
                 document.getElementById("F").style.opacity = "1.0";
                 
-                responsiveVoice.speak("hello world");
+                responsiveVoice.speak("the temperature is "+TempResult+" degrees fahrenheit.");
 
             });
 
@@ -71,6 +71,7 @@
             if(task != '' && itemNum != 15){
                 items.push(task);
                 itemNum ++;
+                responsiveVoice.speak("adding "+ tag +" to the too-doo list");
                 console.log(itemNum + "Added")
                 listTodos();
                 return false;
@@ -94,18 +95,39 @@
         }
 
         var removeItem = function(i) {
-            console.log("Removing"+items[i]);
+
+            responsiveVoice.speak("removing "+items[i]+" from the too-doo list");
+            console.log("Removing" + items[i]);
             items.splice(i, 1);
             listTodos();
-            itemNum --;
+            itemNum--;
             console.log(itemNum + "Removed")
             return false;
         }
 
+        var revealTraffic = function () {
+            responsiveVoice.speak("showing traffic information");
+            $("#trafficFrame").removeClass("greyedOut");
+        }
+
+        var readTodo = function () {
+            if (items.length > 0) {
+                for (var i = 0; i < items.length; i++) {
+                    responsiveVoice.speak("Item number "+i+" is "+item[i]+".");
+                }
+            }
+        }
+        var fairest = function () {
+            responsiveVoice.speak("Why, it's "+window.fullName+", of course.");
+        }
+
     var commands = {
         '(show me the) weather':            weatherHandler,
+        "(what's my) todo list?": readTodo,
         'add *item (to the list)':          addItem,
         'remove *item':     searchItems,
+        'traffic': revealTraffic,
+        "(who's the) fairest (of them all?)": fairest
     };
 
     // Add voice commands to respond to
