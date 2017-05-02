@@ -11,6 +11,7 @@
         /*
         the following is handled when the word "weather" is recieved
         */
+        var description;
         var weatherHandler = function(){
 
             var url = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&APPID=81899cb18139bf576e0186c07ef81fff' ;
@@ -22,9 +23,7 @@
                 
                 document.getElementById("temp").innerHTML= TempResult;
                 document.getElementById("F").style.opacity = "1.0";
-                
-                responsiveVoice.speak("the temperature is "+TempResult+" degrees fahrenheit.");
-
+                    responsiveVoice.speak("the temperature is "+TempResult+" degrees fahrenheit.");
             });
 
             /*
@@ -34,7 +33,7 @@
                 console.log(DescCall);
 
                 var DescResult = DescCall.weather[0].main;
-
+                console.log(DescResult);
                 var x = DescResult.search(/rain/i);
                 var y = DescResult.search(/storm/i);
                 if ((x != -1) || (y != -1)) {
