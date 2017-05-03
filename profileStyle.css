@@ -1,0 +1,46 @@
+body{
+    background: #014859;
+    color: #B9D2D8;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+}
+a{
+    color: #B9D2D8;
+    text-decoration: none;
+}
+a:hover, a:active {
+    text-decoration: underline;
+}
+#signOutButton, #profileButton,#workButton{
+    position: absolute;
+    height: 30px;
+    border: 0;
+    margin: 0;
+    background-color: white;
+    border: 1px solid #014859;
+}
+#profileButton{
+    right: 0px;
+}
+#workButton{
+    top: 70px;
+    left: 0px;
+    width: 310px;
+}
+#addressForm{
+    position: absolute;
+    left:200px;
+    top: 100px;
+}
+#displayInfo{
+    position: absolute;
+    left:200px;
+    top: 225px;
+}
+.signButtons{
+    position: absolute;
+    right: 0;
+}
